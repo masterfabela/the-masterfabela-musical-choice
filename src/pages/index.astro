@@ -138,7 +138,7 @@ import Card from '../components/Card.astro';
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   main {
     z-index: 2;
     margin: auto;
@@ -234,16 +234,18 @@ import Card from '../components/Card.astro';
     margin-top: 10rem;
     grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
 
-    @media only screen and (max-width: 800px) {
+    @media (width < 800px) {
       margin-top: 14rem;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media (width < 600px) {
       margin-top: 18rem;
       grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     }
-    @media only screen and (max-width: 450) {
-      margin-top: 7rem;
+
+    @media (width < 450px) {
+      margin-top: 9rem;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     }
 
     gap: 2rem;
