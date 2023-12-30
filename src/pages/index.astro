@@ -228,8 +228,11 @@ import Card from '../components/Card.astro';
     position: relative;
     display: block;
     overflow: hidden;
+    /*
     background-color: #13151a;
+    */
     z-index: 2;
+    backdrop-filter: blur(30px);
     display: grid;
     margin-top: 10rem;
     grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
@@ -256,13 +259,16 @@ import Card from '../components/Card.astro';
     gap: 2rem;
     padding: 0;
     iframe {
+      opacity: 1;
       @media (hover: hover) {
         transition: opacity 0.2s;
-        opacity: 0.5;
+        opacity: 0.75;
         &:hover,
         &:active {
           opacity: 1;
         }
+      }
+      &:not(:hover) {
       }
     }
   }
