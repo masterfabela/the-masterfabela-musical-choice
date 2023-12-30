@@ -248,6 +248,11 @@ import Card from '../components/Card.astro';
       grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     }
 
+    @media (width < 400px) {
+      margin-top: 11rem;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    }
+
     gap: 2rem;
     padding: 0;
     iframe {
